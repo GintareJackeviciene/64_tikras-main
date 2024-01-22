@@ -1,4 +1,4 @@
-function SmartInput({ id, formik, type = 'text', readOnly = false }) {
+function SmartInput({ id, formik, type = 'text', readOnly = false, placeholder ='' }) {
   // id = title
 
   const areaInput = (
@@ -6,6 +6,7 @@ function SmartInput({ id, formik, type = 'text', readOnly = false }) {
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}
       value={formik.values[id]}
+      placeholder={placeholder}
       className='w-full px-3 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 '
       id={id}
       rows='3'></textarea>
@@ -24,6 +25,7 @@ function SmartInput({ id, formik, type = 'text', readOnly = false }) {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values[id]}
+            placeholder={placeholder}
             type={type}
             className='w-full px-3 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 '
             id={id}

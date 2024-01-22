@@ -6,10 +6,12 @@ import RegisterPage from './pages/RegisterPage';
 import ShopPage from './pages/ShopPage';
 import HomePage from './pages/HomePage';
 import Header from './components/layout/Header';
+import { Toaster } from 'react-hot-toast';
 
 export default function App() {
   return (
     <div className=''>
+      <Toaster/>
      <Header/>
       <Routes>
         <Route path='/' element={<HomePage />} />
